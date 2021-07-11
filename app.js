@@ -1,4 +1,4 @@
-const randSayi = Math.floor(Math.random()*100); 
+const randSayi = Math.floor(Math.random()*100)+1; 
 console.log(randSayi);
 
 const sonuc = document.querySelector("#sonuc");
