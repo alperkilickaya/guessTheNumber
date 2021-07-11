@@ -10,8 +10,8 @@ let guessCount = 1;
 
 
 function checkNumber(){
-        const enterNum = inputArea.value;
-        if (enterNum == randSayi ){
+        const enterNum = parseInt(inputArea.value.trim());
+        if (enterNum === randSayi ){
             sonuc.textContent="Bildiniz!";
             sonuc.style.color="green";
             stopProgress();
@@ -22,7 +22,9 @@ function checkNumber(){
         }else if( enterNum> randSayi){
             sonuc.textContent="Biraz Aşağı!";
             guessCount += 1
-        }  
+        } else {
+            sonuc.textContent="Lütfen Sayı Giriniz!"
+        } 
     }
 
 function stopProgress(){
