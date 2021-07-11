@@ -13,6 +13,7 @@ function checkNumber(){
         const enterNum = inputArea.value;
         if (enterNum == randSayi ){
             sonuc.textContent="Bildiniz!";
+            sonuc.style.color="green";
             stopProgress();
             resetbutton.style.visibility = "visible";
         }else if(enterNum<randSayi){
