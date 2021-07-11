@@ -4,33 +4,45 @@ console.log(randSayi);
 const sonuc = document.querySelector("#sonuc");
 const btn = document.getElementById("check");
 const guess = document.getElementById("guess");
-const inputArea = document.getElementById("num")
-const resetbutton = document.getElementById("reset")
+const inputArea = document.getElementById("num");
+const resetbutton = document.getElementById("reset");
 let guessCount = 1;
 
+
+inputArea.addEventListener('keyup', function(event){
+    if(event.keyCode === 13){
+        event.preventDefault();
+        btn.click();
+    }
+    
+})
 
 function checkNumber(){
         const enterNum = parseInt(inputArea.value.trim());
         if (enterNum === randSayi ){
-            sonuc.textContent="Bildiniz!";
+            sonuc.textContent="You Won!";
             sonuc.style.color="green";
             stopProgress();
-            resetbutton.style.visibility = "visible";
         }else if(enterNum<randSayi){
-            sonuc.textContent="Biraz Yukarı!";
+            sonuc.textContent="Up!!";
             guessCount += 1
         }else if( enterNum> randSayi){
-            sonuc.textContent="Biraz Aşağı!";
+            sonuc.textContent="Down";
             guessCount += 1
         } else {
-            sonuc.textContent="Lütfen Sayı Giriniz!"
+            sonuc.textContent="Only Numbers!"
         } 
     }
+
+  
 
 function stopProgress(){
     btn.disabled = true;
     inputArea.disabled = true;
     guess.textContent = guessCount;
+    resetbutton.style.visibility = "visible";
+    btn.style.opacity = 0.7;
+
 
 }
 

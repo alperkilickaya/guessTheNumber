@@ -44,7 +44,7 @@ h1 {
 }
 
 #reset{
-    background-color: indianred;
+    background-color: red;
     color: white;
     border: none;
     padding: 4px;
@@ -74,7 +74,7 @@ img{
 
     #num{
         margin-left: 0;
-        width: 150px;
+        width: 140px;
     }
 
 }
