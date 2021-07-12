@@ -38,10 +38,12 @@ function checkNumber(){
 
 function stopProgress(){
     btn.disabled = true;
+    inputArea.value = null;
     inputArea.disabled = true;
     guess.textContent = guessCount;
     resetbutton.style.visibility = "visible";
     btn.style.opacity = 0.7;
+
 
 
 }
